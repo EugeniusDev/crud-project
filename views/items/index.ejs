@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<a href="/ui/items/new" class="add-btn">Add New Item</a>
+
+<% if (items.length > 0) { %>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% items.forEach(item => { %>
+            <tr>
+                <td><%= item.id %></td>
+                <td><%= item.name %></td>
+                <td><%= item.description %></td>
+                <td class="actions">
+                    <a href="/ui/items/<%= item.id %>/edit" class="edit-btn">Edit</a>
+                    <form action="/items/<%= item.id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+<% } else { %>
+    <p>No items found. <a href="/ui/items/new">Add one?</a></p>
+<% } %>
+
+<%- include('../partials/footer') %>

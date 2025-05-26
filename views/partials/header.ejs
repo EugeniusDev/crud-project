@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <!-- You can link a CSS file here from the 'public' folder if you create one -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .actions a, .actions button { margin-right: 5px; padding: 5px 10px; border-radius: 4px; border: none; cursor: pointer; }
+        .actions .edit-btn { background-color: #ffc107; color: black; }
+        .actions .delete-btn { background-color: #dc3545; color: white; }
+        .add-btn { background-color: #28a745; color: white; padding: 10px 15px; display: inline-block; margin-bottom: 20px; border-radius: 4px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input[type="text"], .form-group textarea { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .form-group textarea { resize: vertical; }
+        .submit-btn { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
+        .error-message { color: red; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1><%= pageTitle %></h1>
